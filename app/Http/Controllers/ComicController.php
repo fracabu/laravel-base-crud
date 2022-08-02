@@ -14,7 +14,11 @@ class ComicController extends Controller
      */
     public function index()
     {
+        //recupero la lista dei dati
         $data = Comic::all();
+
+        //return della view che si trova nella cartella comics e si chiama index
+        return view("comics.index", compact ("comics"));
     }
 
     /**
